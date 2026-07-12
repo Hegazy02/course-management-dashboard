@@ -46,7 +46,7 @@ export class GeneralTableComponent<T> {
   });
 
   selectionMode = input<'single' | 'multiple'>();
-  selection = input<T | T[]>();
+  selection = input<T | T[] | null>();
 
   rowsPerPageOptions = input<number[]>();
   alwaysShowPaginator = input(true);

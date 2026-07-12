@@ -19,7 +19,7 @@
   [showGridlines]="showGridlines()"
   [tableStyle]="tableStyle()"
   [selectionMode]="selectionMode()"
-  [(selection)]="selection"
+  [selection]="selection()"
   [rowsPerPageOptions]="rowsPerPageOptions()"
   [alwaysShowPaginator]="alwaysShowPaginator()"
   [rowHover]="rowHover()"
@@ -39,7 +39,7 @@
   </ng-template>
 
   <ng-template pTemplate="body" let-rowData let-columns="columns">
-    <tr>
+    <tr [pSelectableRow]="selectionMode() ? rowData : undefined">
       @for (col of columns; track col.field) {
         <td
           [style.width]="col.width"

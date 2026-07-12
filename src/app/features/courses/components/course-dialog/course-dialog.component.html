@@ -1,0 +1,108 @@
+<p-dialog
+  [(visible)]="visible"
+  [modal]="true"
+  [header]="title()"
+  [draggable]="false"
+  styleClass="w-[95vw] md:w-[44rem]"
+  (onHide)="resetForm()"
+>
+  <form [formGroup]="courseForm" class="flex flex-col gap-4" (ngSubmit)="save()">
+    <div class="flex flex-col gap-1">
+      <label for="courseName" class="text-sm font-semibold">Course Name</label>
+      <input pInputText id="courseName" formControlName="courseName" />
+      <app-form-error
+        [control]="courseForm.controls.courseName"
+        [messages]="validationMessages.courseName"
+      />
+    </div>
+
+    <div class="grid gap-4 md:grid-cols-2">
+      <div class="flex flex-col gap-1">
+        <label for="instructorName" class="text-sm font-semibold">Instructor Name</label>
+        <input pInputText id="instructorName" formControlName="instructorName" />
+        <app-form-error
+          [control]="courseForm.controls.instructorName"
+          [messages]="validationMessages.instructorName"
+        />
+      </div>
+
+      <div class="flex flex-col gap-1">
+        <label for="category" class="text-sm font-semibold">Category</label>
+        <p-select
+          inputId="category"
+          [options]="categories"
+          formControlName="category"
+          placeholder="Select a category"
+          class="w-full"
+        />
+        <app-form-error
+          [control]="courseForm.controls.category"
+          [messages]="validationMessages.category"
+        />
+      </div>
+    </div>
+
+    <div class="grid gap-4 md:grid-cols-2">
+      <div class="flex flex-col gap-1">
+        <label for="duration" class="text-sm font-semibold">Duration in Hours</label>
+        <p-inputnumber inputId="duration" formControlName="duration" [min]="0" class="w-full" />
+        <app-form-error
+          [control]="courseForm.controls.duration"
+          [messages]="validationMessages.duration"
+        />
+      </div>
+
+      <div class="flex flex-col gap-1">
+        <label for="price" class="text-sm font-semibold">Price</label>
+        <p-inputnumber
+          inputId="price"
+          formControlName="price"
+          [min]="0"
+          mode="decimal"
+          [minFractionDigits]="2"
+          class="w-full"
+        />
+        <app-form-error
+          [control]="courseForm.controls.price"
+          [messages]="validationMessages.price"
+        />
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-1">
+      <label for="status" class="text-sm font-semibold">Status</label>
+      <p-select
+        inputId="status"
+        [options]="statuses"
+        formControlName="status"
+        placeholder="Select a status"
+        class="w-full"
+      />
+      <app-form-error
+        [control]="courseForm.controls.status"
+        [messages]="validationMessages.status"
+      />
+    </div>
+
+    <div class="flex flex-col gap-1">
+      <label for="description" class="text-sm font-semibold">Description</label>
+      <textarea
+        pTextarea
+        id="description"
+        formControlName="description"
+        rows="4"
+        class="w-full"
+        maxlength="500"
+      ></textarea>
+      <app-form-error
+        [control]="courseForm.controls.description"
+        [messages]="validationMessages.description"
+      />
+    </div>
+
+    <div class="flex flex-col-reverse justify-end gap-2 sm:flex-row">
+      <button type="button" pButton severity="secondary" label="Cancel" (click)="close()"></button>
+      <button type="submit" pButton [label]="submitLabel()" [loading]="saving()"></button>
+    </div>
+  </form>
+</p-dialog>

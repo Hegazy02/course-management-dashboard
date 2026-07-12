@@ -1,16 +1,19 @@
 import { Component, inject, signal } from '@angular/core';
 import { finalize } from 'rxjs';
+import { ButtonModule } from 'primeng/button';
 import { TableLazyLoadEvent } from 'primeng/table';
 
 import { ConfirmationService } from '../../../../core/services/confirmation.service';
 import { GeneralTableComponent } from '../../../../shared/components/general-table/general-table.component';
+import { CourseDialogComponent } from '../../components/course-dialog/course-dialog.component';
+import { Course } from '../../models/course.model';
 import { CoursesService } from '../../services/courses.service';
 import { courseColumns } from './config/course-columns';
 
 @Component({
   selector: 'app-course-list',
   standalone: true,
-  imports: [GeneralTableComponent],
+  imports: [ButtonModule, CourseDialogComponent, GeneralTableComponent],
   templateUrl: './course-list.component.html',
   styleUrl: './course-list.component.css',
 })
@@ -24,6 +27,8 @@ export class CourseListComponent {
   protected readonly pageSize = this.coursesService.pageSize;
 
   protected readonly loading = signal(false);
+  protected readonly dialogVisible = signal(false);
+  protected readonly selectedCourse = signal<Course | undefined>(undefined);
 
   private loadCourses(query: {
     page: number;
@@ -52,6 +57,28 @@ export class CourseListComponent {
     this.loadCourses({
       page,
       pageSize,
+    });
+  }
+
+  protected openAddDialog(): void {
+    this.selectedCourse.set(undefined);
+    this.dialogVisible.set(true);
+  }
+
+  protected openEditDialog(): void {
+    if (this.selectedCourse()) {
+      this.dialogVisible.set(true);
+    }
+  }
+
+  protected selectCourse(course: Course | Course[]): void {
+    this.selectedCourse.set(Array.isArray(course) ? (course[0] ?? null) : course);
+  }
+
+  protected refreshCourses(): void {
+    this.loadCourses({
+      page: this.coursesService.page(),
+      pageSize: this.coursesService.pageSize(),
     });
   }
 

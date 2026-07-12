@@ -1,7 +1,7 @@
 {
   "courses": [
     {
-      "id": 1,
+      "id": "1",
       "description": "Comprehensive introduction to Angular framework covering components, services, routing, and state management.",
       "courseName": "Angular Fundamentals",
       "instructorName": "Sarah Johnson",
@@ -13,7 +13,7 @@
       "thumbnail": "https://picsum.photos/seed/angular/320/180"
     },
     {
-      "id": 2,
+      "id": "2",
       "description": "Deep dive into React hooks, context API, and advanced patterns for building scalable applications.",
       "courseName": "Advanced React Patterns",
       "instructorName": "Michael Chen",
@@ -25,7 +25,7 @@
       "thumbnail": "https://picsum.photos/seed/react/320/180"
     },
     {
-      "id": 3,
+      "id": "3",
       "description": "Master Node.js with Express, MongoDB, and RESTful API design principles.",
       "courseName": "Node.js Backend Mastery",
       "instructorName": "David Kim",
@@ -37,7 +37,7 @@
       "thumbnail": "https://picsum.photos/seed/nodejs/320/180"
     },
     {
-      "id": 4,
+      "id": "4",
       "description": "Learn Python for data analysis, machine learning, and automation.",
       "courseName": "Python for Data Science",
       "instructorName": "Emily Rodriguez",
@@ -49,19 +49,18 @@
       "thumbnail": "https://picsum.photos/seed/python/320/180"
     },
     {
-      "id": 5,
-      "description": "Architect and deploy scalable microservices using Docker and Kubernetes.",
+      "category": "Mobile",
       "courseName": "Microservices with Docker & Kubernetes",
-      "instructorName": "James Wilson",
-      "category": "DevOps",
+      "description": "Architect and deploy scalable microservices using Docker and Kubernetes.",
       "duration": 55,
+      "instructorName": "James Wilson",
       "price": 399.99,
       "status": "Draft",
-      "createdDate": "2025-03-10",
-      "thumbnail": "https://picsum.photos/seed/docker/320/180"
+      "thumbnail": "https://picsum.photos/seed/docker/320/180",
+      "id": "5"
     },
     {
-      "id": 6,
+      "id": "6",
       "description": "Understand TypeScript fundamentals, generics, decorators, and advanced type system features.",
       "courseName": "TypeScript Deep Dive",
       "instructorName": "Sarah Johnson",
@@ -73,7 +72,7 @@
       "thumbnail": "https://picsum.photos/seed/typescript/320/180"
     },
     {
-      "id": 7,
+      "id": "7",
       "description": "Build and deploy iOS and Android apps with Flutter and Dart.",
       "courseName": "Flutter Mobile Development",
       "instructorName": "Lisa Park",
@@ -85,7 +84,7 @@
       "thumbnail": "https://picsum.photos/seed/flutter/320/180"
     },
     {
-      "id": 8,
+      "id": "8",
       "description": "Complete guide to AWS cloud services, from EC2 to Lambda and beyond.",
       "courseName": "AWS Cloud Practitioner",
       "instructorName": "James Wilson",
@@ -97,7 +96,7 @@
       "thumbnail": "https://picsum.photos/seed/aws/320/180"
     },
     {
-      "id": 9,
+      "id": "9",
       "description": "Learn SQL, NoSQL, indexing strategies, and query optimization techniques.",
       "courseName": "Database Design & Optimization",
       "instructorName": "Emily Rodriguez",
@@ -109,7 +108,7 @@
       "thumbnail": "https://picsum.photos/seed/database/320/180"
     },
     {
-      "id": 10,
+      "id": "10",
       "description": "Build modern, responsive UIs with Tailwind CSS and component-driven design.",
       "courseName": "Tailwind CSS & Modern UI Design",
       "instructorName": "Michael Chen",
@@ -121,7 +120,7 @@
       "thumbnail": "https://picsum.photos/seed/tailwind/320/180"
     },
     {
-      "id": 11,
+      "id": "11",
       "description": "End-to-end testing with Cypress, Playwright, and test-driven development practices.",
       "courseName": "Automated Testing Masterclass",
       "instructorName": "David Kim",
@@ -133,19 +132,18 @@
       "thumbnail": "https://picsum.photos/seed/testing/320/180"
     },
     {
-      "id": 12,
-      "description": "Master Rust systems programming with a focus on performance and memory safety.",
-      "courseName": "Rust Systems Programming",
-      "instructorName": "Alex Turner",
       "category": "Backend",
-      "duration": 60,
+      "courseName": "Rust Systems Programming",
+      "description": "Master Rust systems programming with a focus on performance and memory safety.",
+      "duration": 6000000,
+      "instructorName": "Alex Turner",
       "price": 449.99,
       "status": "Active",
-      "createdDate": "2025-05-01",
-      "thumbnail": "https://picsum.photos/seed/rust/320/180"
+      "thumbnail": "https://picsum.photos/seed/rust/320/180",
+      "id": "12"
     },
     {
-      "id": 13,
+      "id": "13",
       "description": "Implement CI/CD pipelines with GitHub Actions, Jenkins, and GitLab CI.",
       "courseName": "CI/CD Pipeline Engineering",
       "instructorName": "James Wilson",
@@ -157,7 +155,7 @@
       "thumbnail": "https://picsum.photos/seed/cicd/320/180"
     },
     {
-      "id": 14,
+      "id": "14",
       "description": "Build and train neural networks with TensorFlow and PyTorch.",
       "courseName": "Deep Learning with TensorFlow",
       "instructorName": "Emily Rodriguez",
@@ -169,7 +167,7 @@
       "thumbnail": "https://picsum.photos/seed/tensorflow/320/180"
     },
     {
-      "id": 15,
+      "id": "15",
       "description": "Secure your applications against OWASP top 10 vulnerabilities.",
       "courseName": "Web Security & Ethical Hacking",
       "instructorName": "Sarah Johnson",
@@ -181,7 +179,7 @@
       "thumbnail": "https://picsum.photos/seed/security/320/180"
     },
     {
-      "id": 16,
+      "id": "16",
       "description": "Learn to build real-time applications with SignalR and WebSockets.",
       "courseName": "Real-Time Applications with SignalR",
       "instructorName": "Michael Chen",
@@ -193,7 +191,7 @@
       "thumbnail": "https://picsum.photos/seed/signalr/320/180"
     },
     {
-      "id": 17,
+      "id": "17",
       "description": "Design and develop RESTful and GraphQL APIs with best practices.",
       "courseName": "API Design with GraphQL & REST",
       "instructorName": "Alex Turner",
@@ -205,7 +203,7 @@
       "thumbnail": "https://picsum.photos/seed/graphql/320/180"
     },
     {
-      "id": 18,
+      "id": "18",
       "description": "Master iOS development with SwiftUI, Combine, and modern architecture patterns.",
       "courseName": "iOS Development with SwiftUI",
       "instructorName": "Lisa Park",
@@ -217,7 +215,7 @@
       "thumbnail": "https://picsum.photos/seed/swiftui/320/180"
     },
     {
-      "id": 19,
+      "id": "19",
       "description": "Learn analog and digital circuit design with hands-on PCB projects.",
       "courseName": "Embedded Systems & PCB Design",
       "instructorName": "David Kim",
@@ -229,7 +227,7 @@
       "thumbnail": "https://picsum.photos/seed/embedded/320/180"
     },
     {
-      "id": 20,
+      "id": "20",
       "description": "Agile and Scrum methodologies for product managers and development teams.",
       "courseName": "Agile Project Management",
       "instructorName": "Sarah Johnson",
@@ -239,6 +237,18 @@
       "status": "Active",
       "createdDate": "2025-07-01",
       "thumbnail": "https://picsum.photos/seed/agile/320/180"
+    },
+    {
+      "category": "Backend",
+      "courseName": "asd",
+      "description": "",
+      "duration": 4,
+      "instructorName": "asdsa",
+      "price": 555,
+      "status": "Draft",
+      "thumbnail": "https://picsum.photos/seed/course/320/180",
+      "id": "u0R_-pqgzmg"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

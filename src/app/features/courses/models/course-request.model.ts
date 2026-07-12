@@ -1,7 +1,7 @@
-import { Course, CourseStatus } from './course.model';
+import { CourseStatus } from './course.model';
 
 export interface CourseRequest {
-  description: string;
+  description?: string | null;
   courseName: string;
   instructorName: string;
   category: string;

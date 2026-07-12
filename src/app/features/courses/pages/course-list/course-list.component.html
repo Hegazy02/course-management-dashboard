@@ -1,3 +1,16 @@
+<div class="mb-4 flex flex-wrap justify-end gap-2">
+  <button type="button" pButton icon="pi pi-plus" label="Add Course" (click)="openAddDialog()"></button>
+  <button
+    type="button"
+    pButton
+    severity="secondary"
+    icon="pi pi-pencil"
+    label="Edit Selected"
+    [disabled]="!selectedCourse()"
+    (click)="openEditDialog()"
+  ></button>
+</div>
+
 <app-general-table
   [columns]="courseColumns"
   [data]="courses()"
@@ -11,5 +24,14 @@
   currentPageReportTemplate="Showing {first} to {last} of {totalRecords}"
   [rowsPerPageOptions]="[10, 15, 20, 30]"
   [alwaysShowPaginator]="true"
+  selectionMode="single"
+  [selection]="selectedCourse()"
   (lazyLoad)="onLazyLoad($event)"
+  (selectionChange)="selectCourse($event)"
+/>
+
+<app-course-dialog
+  [(visible)]="dialogVisible"
+  [course]="selectedCourse()"
+  (saved)="refreshCourses()"
 />
