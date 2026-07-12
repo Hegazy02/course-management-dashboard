@@ -14,4 +14,5 @@ export interface CourseQuery {
   page?: number;
   pageSize?: number;
   search?: string;
+  status?: string;
 }

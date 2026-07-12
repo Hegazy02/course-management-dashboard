@@ -26,6 +26,27 @@
   ></button>
 </div>
 
+<div class="flex flex-wrap items-center gap-4 mx-2 mb-4">
+  <div class="relative">
+    <input
+      pInputText
+      type="text"
+      [ngModel]="searchTerm()"
+      (ngModelChange)="searchTerm.set($event); onFilterChange()"
+      placeholder="Search by course name..."
+      class="pl-3 pr-3 py-2"
+    />
+  </div>
+
+  <p-select
+    [options]="statusOptions"
+    [ngModel]="statusFilter()"
+    (ngModelChange)="statusFilter.set($event); onFilterChange()"
+    placeholder="Filter by status"
+    class="w-48"
+  />
+</div>
+
 <app-general-table
   [columns]="courseColumns"
   [data]="courses()"
