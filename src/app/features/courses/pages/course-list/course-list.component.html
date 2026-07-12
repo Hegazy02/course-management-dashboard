@@ -1,1 +1,15 @@
-<button pButton (click)="confirm()">Check</button>
+<app-general-table
+  [columns]="courseColumns"
+  [data]="courses()"
+  [loading]="loading()"
+  [totalRecords]="totalRecords()"
+  [rows]="pageSize()"
+  [lazy]="true"
+  [lazyLoadOnInit]="true"
+  [paginator]="true"
+  [showCurrentPageReport]="true"
+  currentPageReportTemplate="Showing {first} to {last} of {totalRecords}"
+  [rowsPerPageOptions]="[10, 15, 20, 30]"
+  [alwaysShowPaginator]="true"
+  (lazyLoad)="onLazyLoad($event)"
+/>

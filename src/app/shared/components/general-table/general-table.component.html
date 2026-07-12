@@ -12,8 +12,9 @@
   [lazyLoadOnInit]="lazyLoadOnInit()"
   [scrollable]="scrollable()"
   [scrollHeight]="scrollHeight()"
-  [sortField]="sortField()"
-  [sortOrder]="sortOrder()"
+  [virtualScroll]="virtualScroll()"
+  [virtualScrollItemSize]="virtualScrollItemSize()"
+  [virtualScrollOptions]="virtualScrollOptions()"
   [stripedRows]="stripedRows()"
   [showGridlines]="showGridlines()"
   [tableStyle]="tableStyle()"
@@ -23,19 +24,15 @@
   [alwaysShowPaginator]="alwaysShowPaginator()"
   [rowHover]="rowHover()"
   [size]="size()"
-  (onLazyLoad)="lazyLoad.emit($event)"
+  (onLazyLoad)="onLazyLoad($event)"
   (onPage)="pageChange.emit($event)"
   (selectionChange)="selectionChange.emit($event)"
 >
   <ng-template pTemplate="header" let-columns>
     <tr>
       @for (col of columns; track col.field) {
-        <th [pSortableColumn]="col.sortable ? col.field : null" [style.width]="col.width">
+        <th [style.width]="col.width">
           {{ col.header }}
-
-          @if (col.sortable) {
-            <p-sortIcon [field]="col.field" />
-          }
         </th>
       }
     </tr>
@@ -47,10 +44,22 @@
         <td
           [style.width]="col.width"
           [class.cursor-pointer]="col.clickable"
+          [class.text-primary]="col.clickable"
+          [class.font-medium]="col.clickable"
           [class.hover:bg-surface-100]="col.clickable"
+          [class.hover:underline]="col.clickable"
           (click)="onCellClick(col, rowData, rowData[col.field])"
         >
           @switch (col.type) {
+            @case ('image') {
+              <img
+                [src]="rowData[col.field]"
+                [alt]="col.header"
+                class="h-12 w-20 rounded object-cover"
+                loading="lazy"
+              />
+            }
+
             @case ('date') {
               {{ rowData[col.field] | date: col.format || 'medium' }}
             }

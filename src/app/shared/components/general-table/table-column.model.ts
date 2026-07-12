@@ -1,9 +1,8 @@
 export interface TableColumn<T> {
   field: Extract<keyof T, string>;
   header: string;
-  type?: 'text' | 'date' | 'number' | 'boolean' | 'tag';
+  type?: 'text' | 'date' | 'number' | 'boolean' | 'tag' | 'image';
   clickable?: boolean;
-  sortable?: boolean;
   filterable?: boolean;
   width?: string;
   format?: string;

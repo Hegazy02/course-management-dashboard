@@ -1,6 +1,5 @@
 import { DatePipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, input, output } from '@angular/core';
-import { SortEvent } from 'primeng/api';
 import { Skeleton } from 'primeng/skeleton';
 import { TableModule, TableLazyLoadEvent, TablePageEvent } from 'primeng/table';
 import { TagModule } from 'primeng/tag';
@@ -30,13 +29,14 @@ export class GeneralTableComponent<T> {
   currentPageReportTemplate = input('{first} to {last} of {totalRecords}');
 
   lazy = input(false);
-  lazyLoadOnInit = input(true);
+  lazyLoadOnInit = input(false);
 
   scrollable = input(false);
   scrollHeight = input<string>();
 
-  sortField = input<Extract<keyof T, string>>();
-  sortOrder = input(1);
+  virtualScroll = input(false);
+  virtualScrollItemSize = input(40);
+  virtualScrollOptions = input<{ delay?: number; scrollHeight?: string }>();
 
   stripedRows = input(false);
   showGridlines = input(false);
@@ -70,19 +70,7 @@ export class GeneralTableComponent<T> {
 
   selectionChange = output<T | T[]>();
 
-  sortChange = output<{
-    field: Extract<keyof T, string>;
-    order: number;
-  }>();
-
   skeletonRowsArray = computed(() => Array.from({ length: this.skeletonRows() }, (_, i) => i));
-
-  onSort(event: SortEvent): void {
-    this.sortChange.emit({
-      field: event.field as Extract<keyof T, string>,
-      order: event.order ?? 1,
-    });
-  }
 
   onCellClick(column: TableColumn<T>, row: T, value: T[Extract<keyof T, string>]): void {
     if (column.clickable) {
@@ -96,5 +84,11 @@ export class GeneralTableComponent<T> {
 
   getSeverity(value: boolean): 'success' | 'danger' {
     return value ? 'success' : 'danger';
+  }
+  onLazyLoad(event: TableLazyLoadEvent): void {
+    if(event.first !== undefined && event.rows !== undefined) {
+     
+      this.lazyLoad.emit(event);
+    }
   }
 }
