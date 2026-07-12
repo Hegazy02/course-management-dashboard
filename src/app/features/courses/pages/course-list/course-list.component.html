@@ -64,6 +64,7 @@
   [selection]="selectedCourse()"
   (lazyLoad)="onLazyLoad($event)"
   (selectionChange)="selectCourse($event)"
+  (cellClick)="onCellClick($event)"
 />
 
 <app-course-dialog

@@ -137,6 +137,10 @@ export class CourseListComponent {
     });
   }
 
+  protected onCellClick(event: { row: Course }): void {
+    this.router.navigate(['/course-list', event.row.id]);
+  }
+
   protected confirmDelete(): void {
     const course = this.selectedCourse();
     if (!course) {

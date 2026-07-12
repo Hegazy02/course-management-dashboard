@@ -1,0 +1,69 @@
+<div class="p-6">
+  <a
+    routerLink="/course-list"
+    class="inline-flex items-center gap-2 text-primary mb-4 no-underline cursor-pointer"
+  >
+    &larr; Back to Courses
+  </a>
+
+  @if (loading()) {
+    <p>Loading...</p>
+  }@else if (error()){
+    <p>{{error()}}</p>
+
+  }
+  
+  @else if (course(); as course) {
+    <div class="flex flex-col gap-6">
+      <h1 class="text-3xl font-bold">{{ course.courseName }}</h1>
+
+      <div class="grid gap-4 md:grid-cols-2">
+        <div>
+          <span class="text-sm text-surface-500">Instructor</span>
+          <p class="font-semibold">{{ course.instructorName }}</p>
+        </div>
+
+        <div>
+          <span class="text-sm text-surface-500">Category</span>
+          <p class="font-semibold">{{ course.category }}</p>
+        </div>
+
+        <div>
+          <span class="text-sm text-surface-500">Duration</span>
+          <p class="font-semibold">{{ course.duration }} hours</p>
+        </div>
+
+        <div>
+          <span class="text-sm text-surface-500">Price</span>
+          <p class="font-semibold">${{ course.price }}</p>
+        </div>
+
+        <div>
+          <span class="text-sm text-surface-500">Status</span>
+          <p class="font-semibold">{{ course.status }}</p>
+        </div>
+
+        <div>
+          <span class="text-sm text-surface-500">Created Date</span>
+          <p class="font-semibold">{{ course.createdDate }}</p>
+        </div>
+      </div>
+
+      @if (course.url) {
+        <div>
+          <span class="text-sm text-surface-500">Course Video</span>
+          <video controls class="w-full max-w-2xl rounded-lg mt-1" src="{{ course.url }}">
+            Your browser does not support the video element.
+          </video>
+        </div>
+      }
+
+      @if (course.description) {
+        <div>
+          <span class="text-sm text-surface-500">Description</span>
+          <p>{{ course.description }}</p>
+        </div>
+      }
+    </div>
+  }
+</div>

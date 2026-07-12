@@ -9,6 +9,7 @@ export interface CourseRequest {
   price: number;
   status: CourseStatus;
   thumbnail: string;
+  url?: string | null;
 }
 export interface CourseQuery {
   page?: number;

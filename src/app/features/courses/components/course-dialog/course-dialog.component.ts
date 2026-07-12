@@ -82,6 +82,7 @@ export class CourseDialogComponent implements OnChanges {
     },
     status: { required: 'Status is required.' },
     description: { maxlength: 'Description cannot exceed 500 characters.' },
+    url: { maxlength: 'URL cannot exceed 500 characters.' },
   };
 
   protected readonly courseForm = this.formBuilder.group({
@@ -95,6 +96,7 @@ export class CourseDialogComponent implements OnChanges {
     price: this.formBuilder.control<number>(0, [Validators.required, Validators.min(0)]),
     status: this.formBuilder.control<CourseStatus | null>(null, Validators.required),
     description: this.formBuilder.control<string | null>(null, Validators.maxLength(500)),
+    url: this.formBuilder.control<string | null>(null, Validators.maxLength(500)),
   });
 
   ngOnChanges(): void {
@@ -143,6 +145,7 @@ export class CourseDialogComponent implements OnChanges {
       price: course?.price ?? 0,
       status: course?.status ?? null,
       description: course?.description ?? null,
+      url: course?.url ?? null,
     });
   }
 
@@ -158,6 +161,7 @@ export class CourseDialogComponent implements OnChanges {
       price: formValue.price as number,
       status: formValue.status as CourseStatus,
       thumbnail: this.course()?.thumbnail ?? 'https://picsum.photos/seed/course/320/180',
+      url: formValue.url,
     };
   }
 }

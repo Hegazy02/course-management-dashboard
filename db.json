@@ -165,6 +165,18 @@
       "status": "Draft",
       "thumbnail": "https://picsum.photos/seed/course/320/180",
       "id": "u0R_-pqgzmg"
+    },
+    {
+      "category": "Frontend",
+      "courseName": "First course",
+      "description": "course",
+      "duration": 1,
+      "instructorName": "Hegazy",
+      "price": 10,
+      "status": "Active",
+      "thumbnail": "https://picsum.photos/seed/course/320/180",
+      "url": "https://www.youtube.com/watch?v=nCqE0jsxhms&t=9s",
+      "id": "hFZWbl9aHzU"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

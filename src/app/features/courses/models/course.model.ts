@@ -1,7 +1,7 @@
 export type CourseStatus = 'Active' | 'Draft' | 'Archived';
 
 export interface Course {
-  id: number;
+  id: string;
   description: string;
   courseName: string;
   instructorName: string;
@@ -11,4 +11,5 @@ export interface Course {
   status: CourseStatus;
   createdDate: string;
   thumbnail: string;
+  url: string;
 }
