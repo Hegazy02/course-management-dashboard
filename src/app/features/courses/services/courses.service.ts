@@ -1,0 +1,70 @@
+import { Injectable, inject, signal } from '@angular/core';
+import { Observable, map, tap } from 'rxjs';
+import { Course } from '../models/course.model';
+import { HttpService, RequestOptions } from '../../../core/services/http.service';
+import { PaginatedResponse } from '../../../core/models/paginated-response.model';
+import { CourseQuery, CourseRequest } from '../models/course-request.model';
+import { QueryParamsBuilder } from '../../../core/utils/query-params-builder';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class CoursesService {
+  private http = inject(HttpService);
+
+  private readonly apiUrl = '/courses';
+
+  courses = signal<Course[]>([]);
+  page = signal(1);
+  pageSize = signal(15);
+  totalRecords = signal(0);
+
+  get(query?: CourseQuery, options?: Omit<RequestOptions, 'params'>): Observable<Course[]> {
+    const page = query?.page ?? 1;
+    const perPage = query?.pageSize ?? this.pageSize();
+
+    const params = new QueryParamsBuilder()
+      .set('_page', page)
+      .set('_per_page', perPage)
+      .set('courseName_contains', query?.search)
+      .set('status', query?.status)
+      .build();
+
+    return this.http
+      .get<PaginatedResponse<Course>>(this.apiUrl, {
+        ...options,
+        params,
+      })
+      .pipe(
+        tap((res) => {
+          this.courses.set(res.data);
+          this.page.set(page);
+          this.pageSize.set(perPage);
+          this.totalRecords.set(res.items);
+        }),
+        map((res) => res.data),
+      );
+  }
+
+  getById(id: string, options?: RequestOptions): Observable<Course> {
+    return this.http.get<Course>(`${this.apiUrl}/${id}`, options);
+  }
+
+  add(course: CourseRequest, options?: RequestOptions): Observable<Course> {
+    return this.http.post<Course>(this.apiUrl, course, options);
+  }
+
+  update(id: string, course: CourseRequest, options?: RequestOptions): Observable<Course> {
+    return this.http.put<Course>(`${this.apiUrl}/${id}`, course, options);
+  }
+
+  delete(id: string, options?: RequestOptions): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${id}`, options);
+  }
+
+  reset(): void {
+    this.courses.set([]);
+    this.page.set(1);
+    this.totalRecords.set(0);
+  }
+}

@@ -49,8 +49,19 @@ export class HttpService {
       .set(SUCCESS_MESSAGE, options?.successMessage ?? null)
       .set(ERROR_MESSAGE, options?.errorMessage ?? null);
 
+    let params = options?.params;
+    if (params && !(params instanceof HttpParams)) {
+      const cleaned: Record<string, any> = {};
+      for (const [key, value] of Object.entries(params)) {
+        if (value !== undefined && value !== null) {
+          cleaned[key] = value;
+        }
+      }
+      params = cleaned;
+    }
+
     return {
-      params: options?.params,
+      params,
       context,
     };
   }

@@ -1,0 +1,155 @@
+<div class="page-wrapper">
+  <p-button
+    label="Back to Courses"
+    icon="pi pi-arrow-left"
+    severity="secondary"
+    variant="text"
+    routerLink="/course-list"
+  />
+
+  @if (loading()) {
+    <div class="skeleton-container">
+      <p-skeleton width="100%" height="12rem" borderRadius="12px" />
+      <p-skeleton width="20rem" height="2.5rem" />
+      <div class="skeleton-grid">
+        @for (_ of [1, 2, 3, 4, 5, 6]; track $index) {
+          <div class="skeleton-field">
+            <p-skeleton width="6rem" height="1rem" />
+            <p-skeleton width="100%" height="1.75rem" />
+          </div>
+        }
+      </div>
+      <p-skeleton width="100%" height="8rem" borderRadius="8px" />
+    </div>
+  } @else if (error()) {
+    <div class="error-card">
+      <i class="pi pi-exclamation-circle"></i>
+      <span>{{ error() }}</span>
+    </div>
+  } @else if (course(); as course) {
+    <p-card styleClass="detail-card">
+      <ng-template pTemplate="header">
+        @if (course.thumbnail) {
+          <img [src]="course.thumbnail" [alt]="course.courseName" class="card-thumbnail" />
+        }
+      </ng-template>
+
+      <div class="card-body">
+        <div class="title-row">
+          <h1 class="course-title">{{ course.courseName }}</h1>
+          <p-tag
+            [value]="course.status"
+            [icon]="statusIcon(course.status)"
+            [severity]="
+              course.status === 'Active'
+                ? 'success'
+                : course.status === 'Draft'
+                  ? 'warn'
+                  : 'secondary'
+            "
+            styleClass="status-tag"
+          />
+        </div>
+
+        <p-divider />
+
+        <div class="info-grid">
+          <div class="info-item">
+            <i class="pi pi-user info-icon"></i>
+            <div>
+              <span class="info-label">Instructor</span>
+              <p class="info-value">{{ course.instructorName }}</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="pi pi-tag info-icon"></i>
+            <div>
+              <span class="info-label">Category</span>
+              <p class="info-value">{{ course.category }}</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="pi pi-clock info-icon"></i>
+            <div>
+              <span class="info-label">Duration</span>
+              <p class="info-value">{{ course.duration }} hours</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="pi pi-dollar info-icon"></i>
+            <div>
+              <span class="info-label">Price</span>
+              <p class="info-value price">{{ course.price | currency }}</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="pi pi-calendar info-icon"></i>
+            <div>
+              <span class="info-label">Created</span>
+              <p class="info-value">{{ course.createdDate | date: 'mediumDate' }}</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="pi pi-hashtag info-icon"></i>
+            <div>
+              <span class="info-label">ID</span>
+              <p class="info-value id-value">{{ course.id }}</p>
+            </div>
+          </div>
+        </div>
+
+        @if (course.description) {
+          <p-divider />
+          <section class="description-section">
+            <h3 class="section-title">
+              <i class="pi pi-file-text"></i>
+              Description
+            </h3>
+            <p class="description-text">{{ course.description }}</p>
+          </section>
+        }
+
+        @if (course.url) {
+          <p-divider />
+          <section class="video-section">
+            <h3 class="section-title">
+              <i class="pi pi-video"></i>
+              Course Video
+            </h3>
+            @if (isYouTubeUrl(course.url); as ytId) {
+              <iframe
+                class="course-video"
+                [src]="embedUrl(course.url, sanitizer)"
+                title="Course video"
+                frameborder="0"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
+            } @else if (isPlayableUrl(course.url)) {
+              <video controls class="course-video" [src]="course.url">
+                Your browser does not support the video element.
+              </video>
+            } @else {
+              <div class="invalid-url">
+                <i class="pi pi-exclamation-triangle"></i>
+                <span>Invalid course URL — please contact support.</span>
+              </div>
+            }
+          </section>
+        }
+      </div>
+    </p-card>
+  }
+</div>
