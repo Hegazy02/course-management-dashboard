@@ -1,5 +1,11 @@
-<div class="mb-4 flex flex-wrap justify-end gap-2">
-  <button type="button" pButton icon="pi pi-plus" label="Add Course" (click)="openAddDialog()"></button>
+<div class="my-4 flex flex-wrap gap-3 ms-2">
+  <button
+    type="button"
+    pButton
+    icon="pi pi-plus"
+    label="Add Course"
+    (click)="openAddDialog()"
+  ></button>
   <button
     type="button"
     pButton
@@ -8,6 +14,15 @@
     label="Edit Selected"
     [disabled]="!selectedCourse()"
     (click)="openEditDialog()"
+  ></button>
+  <button
+    type="button"
+    pButton
+    severity="danger"
+    icon="pi pi-trash"
+    label="Delete Selected"
+    [disabled]="!selectedCourse()"
+    (click)="confirmDelete()"
   ></button>
 </div>
 

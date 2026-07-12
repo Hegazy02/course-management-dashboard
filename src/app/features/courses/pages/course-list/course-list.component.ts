@@ -30,10 +30,7 @@ export class CourseListComponent {
   protected readonly dialogVisible = signal(false);
   protected readonly selectedCourse = signal<Course | undefined>(undefined);
 
-  private loadCourses(query: {
-    page: number;
-    pageSize: number;
-  }): void {
+  private loadCourses(query: { page: number; pageSize: number }): void {
     if (this.loading()) {
       return;
     }
@@ -82,11 +79,25 @@ export class CourseListComponent {
     });
   }
 
-  confirm(): void {
+  protected confirmDelete(): void {
+    const course = this.selectedCourse();
+    if (!course) {
+      return;
+    }
+
     this.confirmationService.confirm({
       header: 'Delete Course',
-      message: 'This action cannot be undone.',
-      accept: () => {},
+      message: `Are you sure you want to delete "${course.courseName}"?`,
+      accept: () => {
+        this.coursesService
+          .delete(course.id, {
+            successMessage: 'Course deleted successfully.',
+          })
+          .subscribe(() => {
+            this.selectedCourse.set(undefined);
+            this.refreshCourses();
+          });
+      },
     });
   }
 }

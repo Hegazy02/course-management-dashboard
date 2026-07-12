@@ -23,10 +23,7 @@ export class CoursesService {
     const page = query?.page ?? 1;
     const perPage = query?.pageSize ?? this.pageSize();
 
-    const params = new QueryParamsBuilder()
-      .set('_page', page)
-      .set('_per_page', perPage)
-      .build();
+    const params = new QueryParamsBuilder().set('_page', page).set('_per_page', perPage).build();
 
     return this.http
       .get<PaginatedResponse<Course>>(this.apiUrl, {
@@ -56,7 +53,7 @@ export class CoursesService {
     return this.http.put<Course>(`${this.apiUrl}/${id}`, course, options);
   }
 
-  delete(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}/${id}`);
+  delete(id: number, options?: RequestOptions): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${id}`, options);
   }
 }

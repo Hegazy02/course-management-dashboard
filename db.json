@@ -13,18 +13,6 @@
       "thumbnail": "https://picsum.photos/seed/angular/320/180"
     },
     {
-      "id": "2",
-      "description": "Deep dive into React hooks, context API, and advanced patterns for building scalable applications.",
-      "courseName": "Advanced React Patterns",
-      "instructorName": "Michael Chen",
-      "category": "Frontend",
-      "duration": 35,
-      "price": 249.99,
-      "status": "Active",
-      "createdDate": "2025-02-01",
-      "thumbnail": "https://picsum.photos/seed/react/320/180"
-    },
-    {
       "id": "3",
       "description": "Master Node.js with Express, MongoDB, and RESTful API design principles.",
       "courseName": "Node.js Backend Mastery",
@@ -37,18 +25,6 @@
       "thumbnail": "https://picsum.photos/seed/nodejs/320/180"
     },
     {
-      "id": "4",
-      "description": "Learn Python for data analysis, machine learning, and automation.",
-      "courseName": "Python for Data Science",
-      "instructorName": "Emily Rodriguez",
-      "category": "Data Science",
-      "duration": 45,
-      "price": 349.99,
-      "status": "Active",
-      "createdDate": "2025-03-05",
-      "thumbnail": "https://picsum.photos/seed/python/320/180"
-    },
-    {
       "category": "Mobile",
       "courseName": "Microservices with Docker & Kubernetes",
       "description": "Architect and deploy scalable microservices using Docker and Kubernetes.",
@@ -58,18 +34,6 @@
       "status": "Draft",
       "thumbnail": "https://picsum.photos/seed/docker/320/180",
       "id": "5"
-    },
-    {
-      "id": "6",
-      "description": "Understand TypeScript fundamentals, generics, decorators, and advanced type system features.",
-      "courseName": "TypeScript Deep Dive",
-      "instructorName": "Sarah Johnson",
-      "category": "Frontend",
-      "duration": 30,
-      "price": 179.99,
-      "status": "Active",
-      "createdDate": "2025-03-15",
-      "thumbnail": "https://picsum.photos/seed/typescript/320/180"
     },
     {
       "id": "7",
