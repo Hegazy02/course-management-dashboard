@@ -5,10 +5,10 @@ import { NavigationStart, Router } from '@angular/router';
   providedIn: 'root',
 })
 export class LoaderService {
-  constructor(router: Router, loader: LoaderService) {
+  constructor(router: Router) {
     router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
-        loader.clear();
+        this.clear();
       }
     });
   }

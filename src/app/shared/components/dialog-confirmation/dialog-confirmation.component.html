@@ -1,0 +1,13 @@
+@if (service.dialog(); as dialog) {
+  <p-dialog [visible]="true" [modal]="true" [closable]="false" [header]="dialog.header">
+    <p>
+      {{ dialog.message }}
+    </p>
+
+    <div class="flex justify-end gap-2 mt-4">
+      <button pButton severity="secondary" (click)="service.close()">Cancel</button>
+
+      <button pButton severity="danger" (click)="dialog.accept(); service.close()">Delete</button>
+    </div>
+  </p-dialog>
+}
