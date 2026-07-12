@@ -25,29 +25,6 @@
       "thumbnail": "https://picsum.photos/seed/nodejs/320/180"
     },
     {
-      "category": "Mobile",
-      "courseName": "Microservices with Docker & Kubernetes",
-      "description": "Architect and deploy scalable microservices using Docker and Kubernetes.",
-      "duration": 55,
-      "instructorName": "James Wilson",
-      "price": 399.99,
-      "status": "Draft",
-      "thumbnail": "https://picsum.photos/seed/docker/320/180",
-      "id": "5"
-    },
-    {
-      "id": "7",
-      "description": "Build and deploy iOS and Android apps with Flutter and Dart.",
-      "courseName": "Flutter Mobile Development",
-      "instructorName": "Lisa Park",
-      "category": "Mobile",
-      "duration": 48,
-      "price": 329.99,
-      "status": "Active",
-      "createdDate": "2025-03-22",
-      "thumbnail": "https://picsum.photos/seed/flutter/320/180"
-    },
-    {
       "id": "8",
       "description": "Complete guide to AWS cloud services, from EC2 to Lambda and beyond.",
       "courseName": "AWS Cloud Practitioner",
@@ -58,18 +35,6 @@
       "status": "Active",
       "createdDate": "2025-04-01",
       "thumbnail": "https://picsum.photos/seed/aws/320/180"
-    },
-    {
-      "id": "9",
-      "description": "Learn SQL, NoSQL, indexing strategies, and query optimization techniques.",
-      "courseName": "Database Design & Optimization",
-      "instructorName": "Emily Rodriguez",
-      "category": "Backend",
-      "duration": 38,
-      "price": 219.99,
-      "status": "Archived",
-      "createdDate": "2025-04-08",
-      "thumbnail": "https://picsum.photos/seed/database/320/180"
     },
     {
       "id": "10",
@@ -153,18 +118,6 @@
       "status": "Archived",
       "createdDate": "2025-06-01",
       "thumbnail": "https://picsum.photos/seed/signalr/320/180"
-    },
-    {
-      "id": "17",
-      "description": "Design and develop RESTful and GraphQL APIs with best practices.",
-      "courseName": "API Design with GraphQL & REST",
-      "instructorName": "Alex Turner",
-      "category": "Backend",
-      "duration": 34,
-      "price": 239.99,
-      "status": "Active",
-      "createdDate": "2025-06-10",
-      "thumbnail": "https://picsum.photos/seed/graphql/320/180"
     },
     {
       "id": "18",
