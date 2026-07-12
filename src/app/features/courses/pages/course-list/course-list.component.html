@@ -1,9 +1,10 @@
-<div class="my-4 flex flex-wrap gap-3 ms-2">
+<div class="my-4 flex flex-wrap gap-3 mx-2">
   <button
     type="button"
     pButton
     icon="pi pi-plus"
     label="Add Course"
+    class="w-full lg:w-auto"
     (click)="openAddDialog()"
   ></button>
   <button
@@ -12,6 +13,7 @@
     severity="secondary"
     icon="pi pi-pencil"
     label="Edit Selected"
+    class="w-full lg:w-auto"
     [disabled]="!selectedCourse()"
     (click)="openEditDialog()"
   ></button>
@@ -21,20 +23,21 @@
     severity="danger"
     icon="pi pi-trash"
     label="Delete Selected"
+    class="w-full lg:w-auto"
     [disabled]="!selectedCourse()"
     (click)="confirmDelete()"
   ></button>
 </div>
 
 <div class="flex flex-wrap items-center gap-4 mx-2 mb-4">
-  <div class="relative">
+  <div class="relative w-full lg:w-1/5">
     <input
       pInputText
       type="text"
       [ngModel]="searchTerm()"
       (ngModelChange)="searchTerm.set($event); onFilterChange()"
       placeholder="Search by course name..."
-      class="pl-3 pr-3 py-2"
+      class="pl-3 pr-3 py-2 w-full"
     />
   </div>
 
@@ -43,7 +46,7 @@
     [ngModel]="statusFilter()"
     (ngModelChange)="statusFilter.set($event); onFilterChange()"
     placeholder="Filter by status"
-    class="w-48"
+    class="w-full lg:w-48"
   />
 </div>
 

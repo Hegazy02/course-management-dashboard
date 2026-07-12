@@ -10,7 +10,8 @@
       "price": 199.99,
       "status": "Active",
       "createdDate": "2025-01-15",
-      "thumbnail": "https://picsum.photos/seed/angular/320/180"
+      "thumbnail": "https://picsum.photos/seed/angular/320/180",
+      "url": "https://www.youtube.com/watch?v=3qBXWUpoPHo"
     },
     {
       "id": "3",
@@ -22,7 +23,8 @@
       "price": 299.99,
       "status": "Active",
       "createdDate": "2025-02-20",
-      "thumbnail": "https://picsum.photos/seed/nodejs/320/180"
+      "thumbnail": "https://picsum.photos/seed/nodejs/320/180",
+      "url": "https://www.youtube.com/watch?v=Oe421EPjeBE"
     },
     {
       "id": "8",
@@ -34,7 +36,8 @@
       "price": 279.99,
       "status": "Active",
       "createdDate": "2025-04-01",
-      "thumbnail": "https://picsum.photos/seed/aws/320/180"
+      "thumbnail": "https://picsum.photos/seed/aws/320/180",
+      "url": "https://www.youtube.com/watch?v=SOTamWNgDKc"
     },
     {
       "id": "10",
@@ -46,7 +49,8 @@
       "price": 149.99,
       "status": "Active",
       "createdDate": "2025-04-15",
-      "thumbnail": "https://picsum.photos/seed/tailwind/320/180"
+      "thumbnail": "https://picsum.photos/seed/tailwind/320/180",
+      "url": "https://www.youtube.com/watch?v=lCxcTsOHrjo"
     },
     {
       "id": "11",
@@ -58,18 +62,21 @@
       "price": 259.99,
       "status": "Draft",
       "createdDate": "2025-04-20",
-      "thumbnail": "https://picsum.photos/seed/testing/320/180"
+      "thumbnail": "https://picsum.photos/seed/testing/320/180",
+      "url": "https://www.youtube.com/watch?v=8Xvx1PwR8C4"
     },
     {
-      "category": "Backend",
-      "courseName": "Rust Systems Programming",
+      "id": "12",
       "description": "Master Rust systems programming with a focus on performance and memory safety.",
-      "duration": 6000000,
+      "courseName": "Rust Systems Programming",
       "instructorName": "Alex Turner",
+      "category": "Backend",
+      "duration": 60,
       "price": 449.99,
       "status": "Active",
+      "createdDate": "2025-03-10",
       "thumbnail": "https://picsum.photos/seed/rust/320/180",
-      "id": "12"
+      "url": "https://www.youtube.com/watch?v=zF34dRivLOw"
     },
     {
       "id": "13",
@@ -81,7 +88,8 @@
       "price": 229.99,
       "status": "Active",
       "createdDate": "2025-05-10",
-      "thumbnail": "https://picsum.photos/seed/cicd/320/180"
+      "thumbnail": "https://picsum.photos/seed/cicd/320/180",
+      "url": "https://www.youtube.com/watch?v=i_23KUAEtUM"
     },
     {
       "id": "14",
@@ -93,7 +101,8 @@
       "price": 499.99,
       "status": "Active",
       "createdDate": "2025-05-18",
-      "thumbnail": "https://picsum.photos/seed/tensorflow/320/180"
+      "thumbnail": "https://picsum.photos/seed/tensorflow/320/180",
+      "url": "https://www.youtube.com/watch?v=6g4O5Uo2BWU"
     },
     {
       "id": "15",
@@ -105,7 +114,8 @@
       "price": 319.99,
       "status": "Draft",
       "createdDate": "2025-05-25",
-      "thumbnail": "https://picsum.photos/seed/security/320/180"
+      "thumbnail": "https://picsum.photos/seed/security/320/180",
+      "url": "https://www.youtube.com/watch?v=G6iABD5zYbE"
     },
     {
       "id": "16",
@@ -117,7 +127,8 @@
       "price": 189.99,
       "status": "Archived",
       "createdDate": "2025-06-01",
-      "thumbnail": "https://picsum.photos/seed/signalr/320/180"
+      "thumbnail": "https://picsum.photos/seed/signalr/320/180",
+      "url": "https://www.youtube.com/watch?v=7sWoDk4Z4n0"
     },
     {
       "id": "18",
@@ -129,7 +140,8 @@
       "price": 429.99,
       "status": "Active",
       "createdDate": "2025-06-18",
-      "thumbnail": "https://picsum.photos/seed/swiftui/320/180"
+      "thumbnail": "https://picsum.photos/seed/swiftui/320/180",
+      "url": "https://www.youtube.com/watch?v=H6V0c44JTZk"
     },
     {
       "id": "19",
@@ -141,7 +153,8 @@
       "price": 549.99,
       "status": "Draft",
       "createdDate": "2025-06-22",
-      "thumbnail": "https://picsum.photos/seed/embedded/320/180"
+      "thumbnail": "https://picsum.photos/seed/embedded/320/180",
+      "url": "https://www.youtube.com/watch?v=O2hsmWbGkCY"
     },
     {
       "id": "20",
@@ -153,30 +166,8 @@
       "price": 159.99,
       "status": "Active",
       "createdDate": "2025-07-01",
-      "thumbnail": "https://picsum.photos/seed/agile/320/180"
-    },
-    {
-      "category": "Backend",
-      "courseName": "asd",
-      "description": "",
-      "duration": 4,
-      "instructorName": "asdsa",
-      "price": 555,
-      "status": "Draft",
-      "thumbnail": "https://picsum.photos/seed/course/320/180",
-      "id": "u0R_-pqgzmg"
-    },
-    {
-      "category": "Frontend",
-      "courseName": "First course",
-      "description": "course",
-      "duration": 1,
-      "instructorName": "Hegazy",
-      "price": 10,
-      "status": "Active",
-      "thumbnail": "https://picsum.photos/seed/course/320/180",
-      "url": "https://www.youtube.com/watch?v=nCqE0jsxhms&t=9s",
-      "id": "hFZWbl9aHzU"
+      "thumbnail": "https://picsum.photos/seed/agile/320/180",
+      "url": "https://www.youtube.com/watch?v=WMGImQpBqok"
     },
     {
       "id": "21",
@@ -188,7 +179,8 @@
       "price": 359.99,
       "status": "Active",
       "createdDate": "2025-07-10",
-      "thumbnail": "https://picsum.photos/seed/serverless/320/180"
+      "thumbnail": "https://picsum.photos/seed/serverless/320/180",
+      "url": "https://www.youtube.com/watch?v=v8199a1qSik"
     },
     {
       "id": "22",
@@ -200,7 +192,8 @@
       "price": 169.99,
       "status": "Active",
       "createdDate": "2025-07-18",
-      "thumbnail": "https://picsum.photos/seed/css/320/180"
+      "thumbnail": "https://picsum.photos/seed/css/320/180",
+      "url": "https://www.youtube.com/watch?v=1e4B1Z5D3Ik"
     },
     {
       "id": "23",
@@ -212,7 +205,8 @@
       "price": 389.99,
       "status": "Draft",
       "createdDate": "2025-07-25",
-      "thumbnail": "https://picsum.photos/seed/kafka/320/180"
+      "thumbnail": "https://picsum.photos/seed/kafka/320/180",
+      "url": "https://www.youtube.com/watch?v=Rd4E6YrW8uA"
     },
     {
       "id": "24",
@@ -224,7 +218,8 @@
       "price": 419.99,
       "status": "Active",
       "createdDate": "2025-08-01",
-      "thumbnail": "https://picsum.photos/seed/nlp/320/180"
+      "thumbnail": "https://picsum.photos/seed/nlp/320/180",
+      "url": "https://www.youtube.com/watch?v=f0p2T2K2kYo"
     },
     {
       "id": "25",
@@ -236,7 +231,8 @@
       "price": 399.99,
       "status": "Active",
       "createdDate": "2025-08-10",
-      "thumbnail": "https://picsum.photos/seed/kotlin/320/180"
+      "thumbnail": "https://picsum.photos/seed/kotlin/320/180",
+      "url": "https://www.youtube.com/watch?v=EExSSotojVI"
     },
     {
       "id": "26",
@@ -248,7 +244,8 @@
       "price": 469.99,
       "status": "Draft",
       "createdDate": "2025-08-18",
-      "thumbnail": "https://picsum.photos/seed/blockchain/320/180"
+      "thumbnail": "https://picsum.photos/seed/blockchain/320/180",
+      "url": "https://www.youtube.com/watch?v=gyMwXuJrbJQ"
     },
     {
       "id": "27",
@@ -260,7 +257,8 @@
       "price": 309.99,
       "status": "Active",
       "createdDate": "2025-08-25",
-      "thumbnail": "https://picsum.photos/seed/terraform/320/180"
+      "thumbnail": "https://picsum.photos/seed/terraform/320/180",
+      "url": "https://www.youtube.com/watch?v=SLB_c_ayRMo"
     },
     {
       "id": "28",
@@ -272,7 +270,8 @@
       "price": 459.99,
       "status": "Active",
       "createdDate": "2025-09-01",
-      "thumbnail": "https://picsum.photos/seed/opencv/320/180"
+      "thumbnail": "https://picsum.photos/seed/opencv/320/180",
+      "url": "https://www.youtube.com/watch?v=WQeoO7MI0Bs"
     },
     {
       "id": "29",
@@ -284,7 +283,8 @@
       "price": 209.99,
       "status": "Archived",
       "createdDate": "2025-09-10",
-      "thumbnail": "https://picsum.photos/seed/electron/320/180"
+      "thumbnail": "https://picsum.photos/seed/electron/320/180",
+      "url": "https://www.youtube.com/watch?v=2JD5R3Ph3bE"
     },
     {
       "id": "30",
@@ -296,7 +296,8 @@
       "price": 269.99,
       "status": "Active",
       "createdDate": "2025-09-18",
-      "thumbnail": "https://picsum.photos/seed/sql/320/180"
+      "thumbnail": "https://picsum.photos/seed/sql/320/180",
+      "url": "https://www.youtube.com/watch?v=7S_tz1z_5bA"
     },
     {
       "id": "31",
@@ -308,7 +309,8 @@
       "price": 379.99,
       "status": "Draft",
       "createdDate": "2025-09-25",
-      "thumbnail": "https://picsum.photos/seed/threejs/320/180"
+      "thumbnail": "https://picsum.photos/seed/threejs/320/180",
+      "url": "https://www.youtube.com/watch?v=YK1Sw_hnm58"
     },
     {
       "id": "32",
@@ -320,7 +322,8 @@
       "price": 289.99,
       "status": "Active",
       "createdDate": "2025-10-01",
-      "thumbnail": "https://picsum.photos/seed/ansible/320/180"
+      "thumbnail": "https://picsum.photos/seed/ansible/320/180",
+      "url": "https://www.youtube.com/watch?v=goclfp6a3LE"
     },
     {
       "id": "33",
@@ -332,7 +335,8 @@
       "price": 439.99,
       "status": "Active",
       "createdDate": "2025-10-08",
-      "thumbnail": "https://picsum.photos/seed/recommender/320/180"
+      "thumbnail": "https://picsum.photos/seed/recommender/320/180",
+      "url": "https://www.youtube.com/watch?v=9gBC9R-vsd4"
     },
     {
       "id": "34",
@@ -344,7 +348,8 @@
       "price": 419.99,
       "status": "Active",
       "createdDate": "2025-10-15",
-      "thumbnail": "https://picsum.photos/seed/springboot/320/180"
+      "thumbnail": "https://picsum.photos/seed/springboot/320/180",
+      "url": "https://www.youtube.com/watch?v=9SGDpanrc8M"
     },
     {
       "id": "35",
@@ -356,7 +361,8 @@
       "price": 179.99,
       "status": "Active",
       "createdDate": "2025-10-22",
-      "thumbnail": "https://picsum.photos/seed/figma/320/180"
+      "thumbnail": "https://picsum.photos/seed/figma/320/180",
+      "url": "https://www.youtube.com/watch?v=W6m2FbG3j5s"
     },
     {
       "id": "36",
@@ -368,7 +374,8 @@
       "price": 369.99,
       "status": "Draft",
       "createdDate": "2025-10-28",
-      "thumbnail": "https://picsum.photos/seed/azure/320/180"
+      "thumbnail": "https://picsum.photos/seed/azure/320/180",
+      "url": "https://www.youtube.com/watch?v=0a3h6s3vCuM"
     },
     {
       "id": "37",
@@ -380,7 +387,8 @@
       "price": 489.99,
       "status": "Active",
       "createdDate": "2025-11-05",
-      "thumbnail": "https://picsum.photos/seed/spark/320/180"
+      "thumbnail": "https://picsum.photos/seed/spark/320/180",
+      "url": "https://www.youtube.com/watch?v=7HX8wrY3FqI"
     },
     {
       "id": "38",
@@ -392,7 +400,8 @@
       "price": 349.99,
       "status": "Active",
       "createdDate": "2025-11-12",
-      "thumbnail": "https://picsum.photos/seed/reactnative/320/180"
+      "thumbnail": "https://picsum.photos/seed/reactnative/320/180",
+      "url": "https://www.youtube.com/watch?v=gvkqT_Uoahw"
     },
     {
       "id": "39",
@@ -404,7 +413,8 @@
       "price": 529.99,
       "status": "Draft",
       "createdDate": "2025-11-20",
-      "thumbnail": "https://picsum.photos/seed/quantum/320/180"
+      "thumbnail": "https://picsum.photos/seed/quantum/320/180",
+      "url": "https://www.youtube.com/watch?v=ZpJNifUwdSc"
     },
     {
       "id": "40",
@@ -416,7 +426,8 @@
       "price": 129.99,
       "status": "Active",
       "createdDate": "2025-11-28",
-      "thumbnail": "https://picsum.photos/seed/facilitation/320/180"
+      "thumbnail": "https://picsum.photos/seed/facilitation/320/180",
+      "url": "https://www.youtube.com/watch?v=k9WqpQp4e2c"
     },
     {
       "id": "41",
@@ -428,7 +439,8 @@
       "price": 399.99,
       "status": "Active",
       "createdDate": "2025-12-05",
-      "thumbnail": "https://picsum.photos/seed/zerotrust/320/180"
+      "thumbnail": "https://picsum.photos/seed/zerotrust/320/180",
+      "url": "https://www.youtube.com/watch?v=9i3Hod4B70A"
     },
     {
       "id": "42",
@@ -440,7 +452,8 @@
       "price": 339.99,
       "status": "Draft",
       "createdDate": "2025-12-12",
-      "thumbnail": "https://picsum.photos/seed/envoy/320/180"
+      "thumbnail": "https://picsum.photos/seed/envoy/320/180",
+      "url": "https://www.youtube.com/watch?v=f6i5pSFCNnE"
     },
     {
       "id": "43",
@@ -452,7 +465,8 @@
       "price": 409.99,
       "status": "Active",
       "createdDate": "2025-12-20",
-      "thumbnail": "https://picsum.photos/seed/timeseries/320/180"
+      "thumbnail": "https://picsum.photos/seed/timeseries/320/180",
+      "url": "https://www.youtube.com/watch?v=0Jp4L7dCq5I"
     },
     {
       "id": "44",
@@ -464,7 +478,8 @@
       "price": 379.99,
       "status": "Active",
       "createdDate": "2026-01-05",
-      "thumbnail": "https://picsum.photos/seed/golang/320/180"
+      "thumbnail": "https://picsum.photos/seed/golang/320/180",
+      "url": "https://www.youtube.com/watch?v=YS4e4q9oBaU"
     },
     {
       "id": "45",
@@ -476,7 +491,8 @@
       "price": 249.99,
       "status": "Active",
       "createdDate": "2026-01-15",
-      "thumbnail": "https://picsum.photos/seed/finops/320/180"
+      "thumbnail": "https://picsum.photos/seed/finops/320/180",
+      "url": "https://www.youtube.com/watch?v=r6vNf2RCLog"
     },
     {
       "id": "46",
@@ -488,7 +504,8 @@
       "price": 269.99,
       "status": "Archived",
       "createdDate": "2026-01-22",
-      "thumbnail": "https://picsum.photos/seed/voice/320/180"
+      "thumbnail": "https://picsum.photos/seed/voice/320/180",
+      "url": "https://www.youtube.com/watch?v=5TkD7n7m7kI"
     },
     {
       "id": "47",
@@ -500,7 +517,8 @@
       "price": 499.99,
       "status": "Draft",
       "createdDate": "2026-02-01",
-      "thumbnail": "https://picsum.photos/seed/unity/320/180"
+      "thumbnail": "https://picsum.photos/seed/unity/320/180",
+      "url": "https://www.youtube.com/watch?v=HmLO8JcWrWY"
     },
     {
       "id": "48",
@@ -512,7 +530,8 @@
       "price": 229.99,
       "status": "Active",
       "createdDate": "2026-02-10",
-      "thumbnail": "https://picsum.photos/seed/scraping/320/180"
+      "thumbnail": "https://picsum.photos/seed/scraping/320/180",
+      "url": "https://www.youtube.com/watch?v=Xjv1sY1T6Rk"
     },
     {
       "id": "49",
@@ -524,7 +543,8 @@
       "price": 479.99,
       "status": "Active",
       "createdDate": "2026-02-18",
-      "thumbnail": "https://picsum.photos/seed/mlops/320/180"
+      "thumbnail": "https://picsum.photos/seed/mlops/320/180",
+      "url": "https://www.youtube.com/watch?v=ROQN2HIHm3k"
     },
     {
       "id": "50",
@@ -536,7 +556,32 @@
       "price": 299.99,
       "status": "Active",
       "createdDate": "2026-03-01",
-      "thumbnail": "https://picsum.photos/seed/leadership/320/180"
+      "thumbnail": "https://picsum.photos/seed/leadership/320/180",
+      "url": "https://www.youtube.com/watch?v=dbD13iDcC0s"
+    },
+    {
+      "id": "hFZWbl9aHzU",
+      "category": "Frontend",
+      "courseName": "First course",
+      "description": "course",
+      "duration": 1,
+      "instructorName": "Hegazy",
+      "price": 10,
+      "status": "Active",
+      "thumbnail": "https://picsum.photos/seed/course/320/180",
+      "url": "https://www.youtube.com/watch?v=nCqE0jsxhms&t=9s"
+    },
+    {
+      "id": "u0R_-pqgzmg",
+      "category": "Backend",
+      "courseName": "asd",
+      "description": "",
+      "duration": 4,
+      "instructorName": "asdsa",
+      "price": 555,
+      "status": "Draft",
+      "thumbnail": "https://picsum.photos/seed/course/320/180",
+      "url": "https://invalid-url"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
