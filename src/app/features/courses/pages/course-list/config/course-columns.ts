@@ -34,6 +34,18 @@ export const courseColumns: TableColumn<Course>[] = [
     field: 'status',
     header: 'Status',
     type: 'tag',
+    severity: (row: Course) => {
+      switch (row.status) {
+        case 'Active':
+          return 'success';
+        case 'Draft':
+          return 'warn';
+        case 'Archived':
+          return 'danger';
+        default:
+          return 'secondary';
+      }
+    },
   },
   {
     field: 'createdDate',
