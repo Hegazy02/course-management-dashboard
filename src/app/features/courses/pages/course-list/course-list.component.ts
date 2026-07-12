@@ -1,6 +1,7 @@
 import { Component, DestroyRef, inject, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormsModule } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { debounceTime, distinctUntilChanged, finalize, Subject } from 'rxjs';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
@@ -24,6 +25,8 @@ import { courseColumns } from './config/course-columns';
 export class CourseListComponent {
   private readonly confirmationService = inject(ConfirmationService);
   private readonly coursesService = inject(CoursesService);
+  private readonly router = inject(Router);
+  private readonly route = inject(ActivatedRoute);
   private readonly destroyRef = inject(DestroyRef);
 
   protected readonly courseColumns = courseColumns;
@@ -47,6 +50,10 @@ export class CourseListComponent {
   private readonly filterChange = new Subject<{ search: string; status: string }>();
 
   constructor() {
+    const params = this.route.snapshot.queryParams;
+    this.searchTerm.set((params['search'] as string) ?? '');
+    this.statusFilter.set((params['status'] as CourseStatus) ?? '');
+
     this.filterChange
       .pipe(
         debounceTime(600),
@@ -54,6 +61,7 @@ export class CourseListComponent {
         takeUntilDestroyed(this.destroyRef),
       )
       .subscribe(({ search, status }) => {
+        this.updateUrl(search, status);
         this.coursesService.reset();
         this.loadCourses({
           page: 1,
@@ -62,6 +70,13 @@ export class CourseListComponent {
           status: status || undefined,
         });
       });
+  }
+
+  private updateUrl(search: string, status: string): void {
+    const queryParams: Record<string, string> = {};
+    if (search) queryParams['search'] = search;
+    if (status) queryParams['status'] = status;
+    this.router.navigate([], { queryParams, replaceUrl: true });
   }
 
   private loadCourses(query: { page: number; pageSize: number; search?: string; status?: string }): void {
