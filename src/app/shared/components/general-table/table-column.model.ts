@@ -6,5 +6,5 @@ export interface TableColumn<T> {
   filterable?: boolean;
   width?: string;
   format?: string;
-  severity?: (row: T) => string;
+  severity?: (row: T) => 'success' | 'info' | 'warn' | 'danger' | 'secondary' | 'contrast';
 }

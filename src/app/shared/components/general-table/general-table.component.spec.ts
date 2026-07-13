@@ -12,11 +12,28 @@ const columns: TableColumn<TestItem>[] = [
   { field: 'name', header: 'Name' },
 ];
 
+function mockMatchMedia(matches: boolean): void {
+  Object.defineProperty(window, 'matchMedia', {
+    writable: true,
+    value: (query: string) => ({
+      matches,
+      media: query,
+      onchange: null,
+      addListener: () => {},
+      removeListener: () => {},
+      addEventListener: () => {},
+      removeEventListener: () => {},
+      dispatchEvent: () => false,
+    }),
+  });
+}
+
 describe('GeneralTableComponent', () => {
   let component: GeneralTableComponent<TestItem>;
   let fixture: ComponentFixture<GeneralTableComponent<TestItem>>;
 
   beforeEach(async () => {
+    mockMatchMedia(false);
     await TestBed.configureTestingModule({
       imports: [GeneralTableComponent],
     }).compileComponents();
