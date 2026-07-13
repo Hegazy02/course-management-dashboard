@@ -1,6 +1,8 @@
 # Course Management Dashboard
 
 Angular application for managing courses in an educational platform. Built with Angular 21, PrimeNG, and json-server mock API.
+# Demo Video
+https://drive.google.com/file/d/1BjjtTbWQGMYWdC_6Rny8xv4oNRmnwsw6/view?usp=sharing
 
 ## Technologies Used
 
